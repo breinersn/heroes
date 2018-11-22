@@ -15,11 +15,16 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding-top>
 
-<ion-list>
-  <ion-item *ngFor = "let heroe of heroes" (click)="pagina3(heroe)">
-    {{heroe.superNombre}}
+<ion-list >
+  <ion-item  color="light" *ngFor = "let heroe of heroes" (click)="pagina3(heroe)">
+
+    <ion-avatar item-left>
+       <img [src]="heroe.avatar">
+    </ion-avatar>
+
+    <h2>{{heroe.superNombre}} </h2>
   </ion-item>
 </ion-list>
 

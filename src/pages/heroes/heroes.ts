@@ -2,7 +2,7 @@ import { Pagina3HeroePage } from '../pages.index';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import {HEROES} from '../../data/data.heroes'
+import {HEROES} from '../../data/data.heroes';
 
 @IonicPage()
 @Component({
