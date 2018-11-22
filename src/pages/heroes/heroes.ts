@@ -1,12 +1,8 @@
+import { Pagina3HeroePage } from '../pages.index';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the HeroesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {HEROES} from '../../data/data.heroes'
 
 @IonicPage()
 @Component({
@@ -15,11 +11,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HeroesPage {
 
+  heroes: any[] = HEROES;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HeroesPage');
-  }
+  pagina3(heroe: any){
 
+    this.navCtrl.push(Pagina3HeroePage, {'heroe':heroe});
+  }
 }
