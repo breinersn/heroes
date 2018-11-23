@@ -1,12 +1,8 @@
+import { Pagina3VillanoPage } from './../pages.index';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the VillanosPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {VILLANOS} from '../../data/data.villanos';
 
 @IonicPage()
 @Component({
@@ -15,11 +11,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class VillanosPage {
 
+  villanos: any[] = VILLANOS;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad VillanosPage');
-  }
+  irvillanoPage(villano:any){
 
+    this.navCtrl.push(Pagina3VillanoPage, {'villano':villano});
+  }
 }

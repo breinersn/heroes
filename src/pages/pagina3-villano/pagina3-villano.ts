@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the Pagina3VillanoPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,11 +9,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class Pagina3VillanoPage {
 
+  villano: any = {};
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Pagina3VillanoPage');
+    this.villano = this.navParams.get('villano');
   }
-
 }
